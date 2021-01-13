@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 
-import NewItem from "./components/NewItem";
+import NewItem from "../NewItem";
 class News extends Component {
   constructor() {
     super();
     this.state = {
-      newItems: [1, 2, 3, 4],
+      newsItems: [1, 2, 3, 4],
     };
+  }
+  addToArchive(id){
+    console.log(id)
   }
   render() {
     return (
       <div className="container">
-        {this.state.newItems.map((item, index) => {
+        {this.state.newsItems.map((item, index) => {
           return (
-            <div className="row justify-content-center">
-              <NewItem key={index} />
+            <div className="row justify-content-center" key={index}>
+              <NewItem type={'news'} action={this.addToArchive} id={index}/>
             </div>
           );
         })}
