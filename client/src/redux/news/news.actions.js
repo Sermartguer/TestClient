@@ -32,8 +32,6 @@ export const updateNews = (type, id) => {
         }
       )
       .then((response) => {
-        console.log(response.data);
-
         dispatch(getNews(type));
       })
       .catch((err) => {
