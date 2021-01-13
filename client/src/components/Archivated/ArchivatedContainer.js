@@ -37,6 +37,7 @@ class Archivated extends Component {
                 type={"archivated"}
                 action={this.removeNew}
                 id={item._id}
+                new={item}
               />
             </div>
           );

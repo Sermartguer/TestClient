@@ -32,7 +32,12 @@ class News extends Component {
         {this.state.newsItems.map((item, index) => {
           return (
             <div className="row justify-content-center" key={index}>
-              <NewItem type={"news"} action={this.addToArchive} id={item._id} />
+              <NewItem
+                type={"news"}
+                action={this.addToArchive}
+                id={item._id}
+                new={item}
+              />
             </div>
           );
         })}
